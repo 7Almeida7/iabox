@@ -52,53 +52,32 @@
             max-width: 1000px;
         }
 
-        .search-area {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto 35px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 14px 18px;
-            border-radius: 10px;
-            border: 1px solid #334155;
-            background-color: var(--card-bg);
-            color: var(--text);
-            font-size: 1rem;
-            outline: none;
-            box-sizing: border-box;
-            transition: border-color 0.2s ease;
-        }
-
-        .search-input:focus {
-            border-color: var(--accent);
-        }
-
+        /* Botões de Acesso Rápido */
         .quick-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
             justify-content: center;
+            margin-bottom: 35px;
         }
 
         .chip {
             background-color: var(--card-bg);
             color: var(--muted);
             border: 1px solid #334155;
-            padding: 6px 14px;
+            padding: 10px 18px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
-        .chip:hover {
+        .chip:hover, .chip.active {
+            background-color: var(--accent);
+            color: #0f172a;
             border-color: var(--accent);
-            color: var(--text);
+            font-weight: bold;
         }
 
         .section-title {
@@ -194,16 +173,13 @@
         <p class="subtitle">O diretório definitivo das IAs mais produtivas da internet</p>
     </header>
 
-    <div class="search-area">
-        <input type="text" id="searchInput" class="search-input" placeholder="O que você procura?" oninput="filterCards()">
-        <div class="quick-tags">
-            <button class="chip" onclick="quickFilter('')">Todas</button>
-            <button class="chip" onclick="quickFilter('vídeo')">🎥 Criar Vídeos</button>
-            <button class="chip" onclick="quickFilter('estudos')">📚 Estudos</button>
-            <button class="chip" onclick="quickFilter('imagem')">🎨 Criar Imagens</button>
-            <button class="chip" onclick="quickFilter('música')">🎵 Áudio & Música</button>
-            <button class="chip" onclick="quickFilter('código')">💻 Programação</button>
-        </div>
+    <div class="quick-tags">
+        <button class="chip active" onclick="filterCategory('all', this)">Todas</button>
+        <button class="chip" onclick="filterCategory('video', this)">🎥 Criar Vídeos</button>
+        <button class="chip" onclick="filterCategory('estudos', this)">📚 Estudos</button>
+        <button class="chip" onclick="filterCategory('imagem', this)">🎨 Criar Imagens</button>
+        <button class="chip" onclick="filterCategory('audio', this)">🎵 Áudio & Música</button>
+        <button class="chip" onclick="filterCategory('codigo', this)">💻 Programação</button>
     </div>
 
     <div class="container">
@@ -211,7 +187,7 @@
         <!-- 1. Buscas, Pesquisa & Raciocínio -->
         <div class="section-title">🔍 Buscas, Pesquisa & Raciocínio</div>
         <div class="grid">
-            <div class="card" data-tags="busca pesquisa fontes google">
+            <div class="card" data-category="busca">
                 <div>
                     <div class="card-header">
                         <h3>Perplexity AI</h3>
@@ -221,7 +197,7 @@
                 </div>
                 <a href="https://www.perplexity.ai" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="busca pesquisa google">
+            <div class="card" data-category="busca">
                 <div>
                     <div class="card-header">
                         <h3>Google Gemini</h3>
@@ -231,7 +207,7 @@
                 </div>
                 <a href="https://gemini.google.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="código lógica raciocínio matemática">
+            <div class="card" data-category="codigo">
                 <div>
                     <div class="card-header">
                         <h3>DeepSeek</h3>
@@ -246,7 +222,7 @@
         <!-- 2. Texto, Estudos & Produtividade -->
         <div class="section-title">✍️ Texto, Estudos & Organização</div>
         <div class="grid">
-            <div class="card" data-tags="texto artigo escrita geral código">
+            <div class="card" data-category="estudos codigo">
                 <div>
                     <div class="card-header">
                         <h3>ChatGPT</h3>
@@ -256,7 +232,7 @@
                 </div>
                 <a href="https://chat.openai.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="texto estudos resumo pdf escrita">
+            <div class="card" data-category="estudos">
                 <div>
                     <div class="card-header">
                         <h3>Claude</h3>
@@ -266,7 +242,7 @@
                 </div>
                 <a href="https://claude.ai" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="estudos pdf resumo podcast notas">
+            <div class="card" data-category="estudos">
                 <div>
                     <div class="card-header">
                         <h3>NotebookLM</h3>
@@ -276,7 +252,7 @@
                 </div>
                 <a href="https://notebooklm.google.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="estudos notas projetos organização">
+            <div class="card" data-category="estudos">
                 <div>
                     <div class="card-header">
                         <h3>Notion AI</h3>
@@ -291,7 +267,7 @@
         <!-- 3. Programação & Criação de Apps -->
         <div class="section-title">💻 Programação & Criação de Sites</div>
         <div class="grid">
-            <div class="card" data-tags="código programação dev site">
+            <div class="card" data-category="codigo">
                 <div>
                     <div class="card-header">
                         <h3>Cursor</h3>
@@ -301,7 +277,7 @@
                 </div>
                 <a href="https://www.cursor.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="código site programação visual app">
+            <div class="card" data-category="codigo">
                 <div>
                     <div class="card-header">
                         <h3>v0.dev</h3>
@@ -316,7 +292,7 @@
         <!-- 4. Design, Imagens & Slides -->
         <div class="section-title">🎨 Design, Imagens & Slides</div>
         <div class="grid">
-            <div class="card" data-tags="slide apresentação imagem">
+            <div class="card" data-category="imagem">
                 <div>
                     <div class="card-header">
                         <h3>Gamma App</h3>
@@ -326,7 +302,7 @@
                 </div>
                 <a href="https://gamma.app" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="imagem foto logo arte">
+            <div class="card" data-category="imagem">
                 <div>
                     <div class="card-header">
                         <h3>Leonardo.Ai</h3>
@@ -336,7 +312,7 @@
                 </div>
                 <a href="https://leonardo.ai" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="imagem foto realista">
+            <div class="card" data-category="imagem">
                 <div>
                     <div class="card-header">
                         <h3>Flux.1</h3>
@@ -346,7 +322,7 @@
                 </div>
                 <a href="https://flux1.ai" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="imagem foto fundo produto">
+            <div class="card" data-category="imagem">
                 <div>
                     <div class="card-header">
                         <h3>Photoroom</h3>
@@ -356,7 +332,7 @@
                 </div>
                 <a href="https://www.photoroom.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="imagem design banner post">
+            <div class="card" data-category="imagem">
                 <div>
                     <div class="card-header">
                         <h3>Canva Magic</h3>
@@ -371,7 +347,7 @@
         <!-- 5. Áudio, Vídeo & Automação -->
         <div class="section-title">🎬 Áudio, Vídeo & Automação</div>
         <div class="grid">
-            <div class="card" data-tags="música voz clonagem dublagem">
+            <div class="card" data-category="audio">
                 <div>
                     <div class="card-header">
                         <h3>ElevenLabs</h3>
@@ -381,7 +357,7 @@
                 </div>
                 <a href="https://elevenlabs.io" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="música som canção">
+            <div class="card" data-category="audio">
                 <div>
                     <div class="card-header">
                         <h3>Suno AI</h3>
@@ -391,7 +367,7 @@
                 </div>
                 <a href="https://suno.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="vídeo corte tiktok reels youtube">
+            <div class="card" data-category="video">
                 <div>
                     <div class="card-header">
                         <h3>Klap</h3>
@@ -401,7 +377,7 @@
                 </div>
                 <a href="https://klap.app" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="vídeo música edição transcrição">
+            <div class="card" data-category="video audio">
                 <div>
                     <div class="card-header">
                         <h3>Descript</h3>
@@ -411,7 +387,7 @@
                 </div>
                 <a href="https://www.descript.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="vídeo avatar apresentação">
+            <div class="card" data-category="video">
                 <div>
                     <div class="card-header">
                         <h3>HeyGen</h3>
@@ -421,7 +397,7 @@
                 </div>
                 <a href="https://www.heygen.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-tags="automação tarefas fluxo">
+            <div class="card" data-category="automacao">
                 <div>
                     <div class="card-header">
                         <h3>Zapier AI</h3>
@@ -440,28 +416,30 @@
     </footer>
 
     <script>
-        function filterCards() {
-            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+        function filterCategory(cat, element) {
+            // Destaca o botão selecionado
+            document.querySelectorAll('.chip').forEach(chip => chip.classList.remove('active'));
+            if (element) {
+                element.classList.add('active');
+            }
+
             const cards = document.querySelectorAll('.card');
-            
             cards.forEach(card => {
-                const text = card.innerText.toLowerCase();
-                const tags = (card.getAttribute('data-tags') || '').toLowerCase();
-                
-                if (query === '' || text.includes(query) || tags.includes(query)) {
+                const category = (card.getAttribute('data-category') || '').toLowerCase();
+                if (cat === 'all' || category.includes(cat)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
             });
 
-            // Esconde os títulos das seções que ficaram sem cartões
-            const sectionTitles = document.querySelectorAll('.section-title');
-            sectionTitles.forEach(title => {
+            // Oculta os títulos das seções sem elementos
+            const titles = document.querySelectorAll('.section-title');
+            titles.forEach(title => {
                 const grid = title.nextElementSibling;
                 if (grid && grid.classList.contains('grid')) {
-                    const visibleCards = Array.from(grid.querySelectorAll('.card')).filter(c => c.style.display !== 'none');
-                    if (visibleCards.length === 0 && query !== '') {
+                    const visibleCards = Array.from(grid.querySelectorAll('.card')).filter(c => c.style.display === 'flex');
+                    if (visibleCards.length === 0 && cat !== 'all') {
                         title.style.display = 'none';
                         grid.style.display = 'none';
                     } else {
@@ -471,13 +449,8 @@
                 }
             });
         }
-
-        function quickFilter(term) {
-            const input = document.getElementById('searchInput');
-            input.value = term;
-            filterCards();
-        }
     </script>
 
 </body>
 </html>
+
