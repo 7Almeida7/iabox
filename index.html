@@ -55,7 +55,7 @@
         .section-title {
             font-size: 1.3rem;
             color: #38bdf8;
-            margin: 35px 0 15px 0;
+            margin: 40px 0 15px 0;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -130,10 +130,11 @@
         }
 
         footer {
-            margin-top: 50px;
+            margin-top: 60px;
             color: var(--muted);
             font-size: 0.85rem;
             text-align: center;
+            padding-bottom: 20px;
         }
     </style>
 </head>
@@ -141,21 +142,21 @@
 
     <header>
         <h1>🤖 iabox</h1>
-        <p class="subtitle">As melhores IAs da internet organizadas por categoria</p>
+        <p class="subtitle">O diretório definitivo das IAs mais produtivas da internet</p>
     </header>
 
     <div class="container">
 
-        <!-- Categoria: Pesquisa -->
-        <div class="section-title">🔍 Buscas & Respostas Diretas</div>
+        <!-- 1. Buscas, Pesquisa & Raciocínio -->
+        <div class="section-title">🔍 Buscas, Pesquisa & Raciocínio</div>
         <div class="grid">
             <div class="card">
                 <div>
                     <div class="card-header">
-                        <h3>Perplexity</h3>
+                        <h3>Perplexity AI</h3>
                         <span class="tag">Fontes & Citações</span>
                     </div>
-                    <p>Substituto do Google com respostas diretas e links das fontes em tempo real.</p>
+                    <p>Substituto avançado do Google. Responde perguntas trazendo links reais, pesquisas em tempo real e citações de artigos.</p>
                 </div>
                 <a href="https://www.perplexity.ai" target="_blank" class="btn">Acessar IA</a>
             </div>
@@ -163,118 +164,218 @@
                 <div>
                     <div class="card-header">
                         <h3>Google Gemini</h3>
-                        <span class="tag">Busca Web</span>
+                        <span class="tag">Busca & Ecossistema</span>
                     </div>
-                    <p>Conectado ao ecossistema Google para pesquisas atualizadas instantaneamente.</p>
+                    <p>IA do Google integrada ao Gmail, Drive e Docs. Perfeita para pesquisas atualizadas e análise de dados.</p>
                 </div>
                 <a href="https://gemini.google.com" target="_blank" class="btn">Acessar IA</a>
             </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>DeepSeek</h3>
+                        <span class="tag">Lógica & Código</span>
+                    </div>
+                    <p>Especializada em raciocínio matemático, lógica complexa e resolução de problemas de programação passo a passo.</p>
+                </div>
+                <a href="https://chat.deepseek.com" target="_blank" class="btn">Acessar IA</a>
+            </div>
         </div>
 
-        <!-- Categoria: Texto & Estudos -->
-        <div class="section-title">✍️ Texto, Estudos & Análise</div>
+        <!-- 2. Texto, Estudos & Produtividade -->
+        <div class="section-title">✍️ Texto, Estudos & Organização</div>
         <div class="grid">
             <div class="card">
                 <div>
                     <div class="card-header">
                         <h3>ChatGPT</h3>
-                        <span class="tag">Geral & Código</span>
+                        <span class="tag">Multiuso & Canvas</span>
                     </div>
-                    <p>Crie artigos, e-mails, tire dúvidas do dia a dia e resolva problemas de código.</p>
+                    <p>A IA conversacional mais famosa. Excelente para criar artigos, e-mails, ideias, scripts e revisão de textos.</p>
                 </div>
                 <a href="https://chat.openai.com" target="_blank" class="btn">Acessar IA</a>
             </div>
             <div class="card">
                 <div>
                     <div class="card-header">
-                        <h3>NotebookLM</h3>
-                        <span class="tag">Estudos & Documentos</span>
+                        <h3>Claude</h3>
+                        <span class="tag">Escrita Humana & PDFs</span>
                     </div>
-                    <p>IA do Google para analisar seus PDFs, criar notas, resumos e até gerar podcasts explicativos.</p>
+                    <p>Redação extremamente natural e análise profunda de documentos extensos sem perder o contexto.</p>
+                </div>
+                <a href="https://claude.ai" target="_blank" class="btn">Acessar IA</a>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>NotebookLM</h3>
+                        <span class="tag">Estudos & Podcasts</span>
+                    </div>
+                    <p>Analisa seus PDFs, apostilas e links para criar guias de estudo, notas e resumos em áudio no estilo podcast.</p>
                 </div>
                 <a href="https://notebooklm.google.com" target="_blank" class="btn">Acessar IA</a>
             </div>
             <div class="card">
                 <div>
                     <div class="card-header">
-                        <h3>Claude</h3>
-                        <span class="tag">Análise & Resumos</span>
+                        <h3>Notion AI</h3>
+                        <span class="tag">Notas & Projetos</span>
                     </div>
-                    <p>Perfeito para ler arquivos PDF pesados, fazer resumos e escrever textos naturais.</p>
+                    <p>Integrado ao Notion para organizar tarefas, resumir reuniões, planejar projetos e redigir documentos.</p>
                 </div>
-                <a href="https://claude.ai" target="_blank" class="btn">Acessar IA</a>
+                <a href="https://www.notion.so" target="_blank" class="btn">Acessar IA</a>
             </div>
         </div>
 
-        <!-- Categoria: Imagens -->
-        <div class="section-title">🎨 Geração de Imagens</div>
+        <!-- 3. Programação & Criação de Apps -->
+        <div class="section-title">💻 Programação & Criação de Sites</div>
         <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Cursor</h3>
+                        <span class="tag">Editor com IA</span>
+                    </div>
+                    <p>O editor de código revolucionário que programa junto com você, entende arquivos inteiros e corrige erros.</p>
+                </div>
+                <a href="https://www.cursor.com" target="_blank" class="btn">Acessar IA</a>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>v0.dev</h3>
+                        <span class="tag">Criação Visual</span>
+                    </div>
+                    <p>Crie interfaces de sites e componentes visuais completos apenas escrevendo o que você deseja em texto.</p>
+                </div>
+                <a href="https://v0.dev" target="_blank" class="btn">Acessar IA</a>
+            </div>
+        </div>
+
+        <!-- 4. Design, Imagens & Slides -->
+        <div class="section-title">🎨 Design, Imagens & Slides</div>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Gamma App</h3>
+                        <span class="tag">Slides Instantâneos</span>
+                    </div>
+                    <p>Crie apresentações de slides profissionais e formatadas em menos de 1 minuto apenas digitando o tema.</p>
+                </div>
+                <a href="https://gamma.app" target="_blank" class="btn">Acessar IA</a>
+            </div>
             <div class="card">
                 <div>
                     <div class="card-header">
                         <h3>Leonardo.Ai</h3>
                         <span class="tag">Artes & Logos</span>
                     </div>
-                    <p>Crie fotos ultra-realistas, logos, artes e ilustrações a partir de textos.</p>
+                    <p>Geração de imagens ultrarrealistas, personagens, artes conceituais e logos para projetos.</p>
                 </div>
                 <a href="https://leonardo.ai" target="_blank" class="btn">Acessar IA</a>
             </div>
             <div class="card">
                 <div>
                     <div class="card-header">
-                        <h3>Canva Magic</h3>
-                        <span class="tag">Edição Rápida</span>
+                        <h3>Flux.1</h3>
+                        <span class="tag">Fotos Realistas</span>
                     </div>
-                    <p>Gere imagens com IA, remova fundos e crie designs prontos em segundos.</p>
+                    <p>Geração de fotos com detalhamento extremo em texturas, sombras e textos dentro da própria imagem.</p>
+                </div>
+                <a href="https://flux1.ai" target="_blank" class="btn">Acessar IA</a>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Photoroom</h3>
+                        <span class="tag">Fotos de Produtos</span>
+                    </div>
+                    <p>Remova fundos instantaneamente e crie fotos de catálogo profissional para e-commerce e redes sociais.</p>
+                </div>
+                <a href="https://www.photoroom.com" target="_blank" class="btn">Acessar IA</a>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Canva Magic</h3>
+                        <span class="tag">Design Rápido</span>
+                    </div>
+                    <p>Ferramentas automáticas para criar banners, posts, edições e artes para redes sociais com IA.</p>
                 </div>
                 <a href="https://www.canva.com" target="_blank" class="btn">Acessar IA</a>
             </div>
         </div>
 
-        <!-- Categoria: Slides -->
-        <div class="section-title">📊 Slides & Apresentações</div>
+        <!-- 5. Áudio, Vídeo & Automação -->
+        <div class="section-title">🎬 Áudio, Vídeo & Automação</div>
         <div class="grid">
             <div class="card">
                 <div>
                     <div class="card-header">
-                        <h3>Gamma App</h3>
-                        <span class="tag">Apresentações</span>
+                        <h3>ElevenLabs</h3>
+                        <span class="tag">Voz & Clonagem</span>
                     </div>
-                    <p>Digite o tema e a IA cria uma apresentação de slides completa e formatada.</p>
+                    <p>Gere narrações humanas hiper-realistas e clonagem de voz perfeita em dezenas de idiomas.</p>
                 </div>
-                <a href="https://gamma.app" target="_blank" class="btn">Acessar IA</a>
+                <a href="https://elevenlabs.io" target="_blank" class="btn">Acessar IA</a>
             </div>
-        </div>
-
-        <!-- Categoria: Áudio & Vídeo -->
-        <div class="section-title">🎵 Áudio, Voz & Vídeo</div>
-        <div class="grid">
             <div class="card">
                 <div>
                     <div class="card-header">
                         <h3>Suno AI</h3>
-                        <span class="tag">Músicas</span>
+                        <span class="tag">Criação de Músicas</span>
                     </div>
-                    <p>Crie músicas completas com vocal e instrumental apenas descrevendo o estilo.</p>
+                    <p>Crie canções completas com vocais, letras e arranjos instrumentais em qualquer estilo musical.</p>
                 </div>
                 <a href="https://suno.com" target="_blank" class="btn">Acessar IA</a>
             </div>
             <div class="card">
                 <div>
                     <div class="card-header">
-                        <h3>ElevenLabs</h3>
-                        <span class="tag">Dublagem & Voz</span>
+                        <h3>Klap</h3>
+                        <span class="tag">Cortes Automáticos</span>
                     </div>
-                    <p>Gere vozes humanas ultra-realistas em vários idiomas a partir de texto.</p>
+                    <p>Transforma vídeos do YouTube em cortes verticais (Reels/TikTok) com legendas automáticas.</p>
                 </div>
-                <a href="https://elevenlabs.io" target="_blank" class="btn">Acessar IA</a>
+                <a href="https://klap.app" target="_blank" class="btn">Acessar IA</a>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Descript</h3>
+                        <span class="tag">Edição por Texto</span>
+                    </div>
+                    <p>Edite vídeos e podcasts alterando a transcrição de texto, removendo gagueiras e ruídos.</p>
+                </div>
+                <a href="https://www.descript.com" target="_blank" class="btn">Acessar IA</a>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>HeyGen</h3>
+                        <span class="tag">Avatares Falantes</span>
+                    </div>
+                    <p>Crie vídeos com avatares virtuais fofos ou realistas apresentando produtos e conteúdos.</p>
+                </div>
+                <a href="https://www.heygen.com" target="_blank" class="btn">Acessar IA</a>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Zapier AI</h3>
+                        <span class="tag">Automação de Tarefas</span>
+                    </div>
+                    <p>Conecte seus aplicativos (E-mail, WhatsApp, Planilhas) para automatizar fluxos de trabalho inteiros.</p>
+                </div>
+                <a href="https://zapier.com" target="_blank" class="btn">Acessar IA</a>
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>Feito por 7Almeida7 | iabox © 2026</p>
+        <p>Feito com ❤️ por 7Almeida7 | iabox © 2026</p>
     </footer>
 
 </body>
