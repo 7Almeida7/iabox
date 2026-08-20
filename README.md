@@ -1,45 +1,31 @@
-# 🤖 iabox | O Universo das IAs em um só lugar
+# 🤖 iabox | Chega de perder tempo procurando IA
 
-[![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)](#)
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2F7almeida7.github.io%2Fiabox%2F&label=Acessar%20Site)]([COLOQUE_AQUI_O_LINK_DO_SEU_SITE])
+> **"O mundo tá lotado de Inteligência Artificial e você ainda fica perdido sem saber qual usar ou o que cada uma faz?"**
 
-O **iabox** é um diretório focado em reunir as melhores e mais úteis ferramentas de Inteligência Artificial **gratuitas** da internet. Pare de perder horas pesquisando no Google; nós organizamos tudo para você!
+O **iabox** nasceu para resolver exatamente isso. Em vez de você testar 50 sites diferentes ou perder horas pesquisando no Google, nós organizamos **as melhores IAs do planeta** em um só lugar, separadas por função e com busca instantânea.
 
-🌐 **[CLIQUE AQUI PARA ACESSAR O SITE E VER AS FERRAMENTAS]([COLOQUE_AQUI_O_LINK_DO_SEU_SITE])**
-
----
-
-## 🚀 O que você encontra no iabox?
-
-- 🎨 **Geração de Imagens:** IAs incríveis para criar artes, logos e fotos realistas.
-- ✍️ **Geração de Textos:** Ferramentas para te ajudar a escrever artigos, e-mails e roteiros.
-- 🎵 **Áudio e Vídeo:** Crie músicas, dublagens e edite vídeos com o poder da IA.
-- 💻 **Programação e Produtividade:** Acelere seu código e seu trabalho no dia a dia.
-
-## 🌟 Por que usar?
-
-- **100% Gratuito:** Focamos em ferramentas que você pode usar sem pagar nada.
-- **Rápido e Direto ao Ponto:** Sem anúncios chatos ou enrolação. É clicar e usar.
-- **Sempre Atualizado:** Novas IAs são adicionadas constantemente.
+👉 **[CLIQUE AQUI PARA ACESSAR O IABOX](https://7almeida7.github.io/iabox/)**
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ⚡ Por que usar o iabox?
 
-Este projeto foi construído de forma simples e rápida utilizando:
-- **HTML5:** Estrutura das páginas.
-- **CSS3:** Estilização (com ajuda do ChatGPT!).
-- **JavaScript:** Para a barra de pesquisa e interações rápidas.
-- **GitHub Pages:** Para hospedagem gratuita.
+* ❌ **O Problema:** Centenas de ferramentas de IA lançadas toda semana, nomes confusos e você sem saber qual resolve o seu problema real.
+* ✅ **A Solução:** Entrou no **iabox**, pesquisou o que precisa (ex: *"criar vídeos"*, *"estudos"*, *"código"*) e a ferramenta certa tá na sua mão em 2 segundos.
 
 ---
 
-## 🤝 Quer contribuir?
+## 🚀 O que você encontra por lá?
 
-Conhece uma ferramenta de IA incrível que não está na nossa lista? Você pode ajudar o iabox a crescer!
-1. Faça um *Fork* deste repositório.
-2. Adicione a ferramenta no arquivo `index.html`.
-3. Abra um *Pull Request* e nós avaliaremos!
+* 🔍 **Buscas & Pesquisas:** Chega de respostas genéricas. IAs que pesquisam a web em tempo real e trazem fontes reais.
+* ✍️ **Texto & Estudos:** Ferramentas para resumir PDFs gigantes, criar artigos, organizar ideias e até gerar podcasts de estudo.
+* 🎨 **Criatividade & Design:** Geradores de imagens ultrarrealistas, remoção de fundo e criação de slides automáticos em 1 minuto.
+* 💻 **Programação & Apps:** IAs que criam sites inteiros e ajudam a programar sem complicação.
+* 🎬 **Áudio, Voz & Vídeo:** Clonagem de voz humana, criação de músicas completas e cortes automáticos para TikTok e Reels.
 
 ---
-*Feito com 💡 e IA por [Seu Nome/7Almeida7](https://github.com/7Almeida7).*
+
+🌐 **Acesse agora e simplifique sua rotina:**  
+[https://7almeida7.github.io/iabox/](https://7almeida7.github.io/iabox/)
+
+*Feito por [7Almeida7](https://github.com/7Almeida7)*
