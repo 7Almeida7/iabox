@@ -207,7 +207,7 @@
                 </div>
                 <a href="https://gemini.google.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-category="codigo">
+            <div class="card" data-category="busca">
                 <div>
                     <div class="card-header">
                         <h3>DeepSeek</h3>
@@ -222,7 +222,7 @@
         <!-- 2. Texto, Estudos & Produtividade -->
         <div class="section-title">✍️ Texto, Estudos & Organização</div>
         <div class="grid">
-            <div class="card" data-category="estudos codigo">
+            <div class="card" data-category="estudos">
                 <div>
                     <div class="card-header">
                         <h3>ChatGPT</h3>
@@ -377,7 +377,7 @@
                 </div>
                 <a href="https://klap.app" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <div class="card" data-category="video audio">
+            <div class="card" data-category="video">
                 <div>
                     <div class="card-header">
                         <h3>Descript</h3>
@@ -417,7 +417,6 @@
 
     <script>
         function filterCategory(cat, element) {
-            // Destaca o botão selecionado
             document.querySelectorAll('.chip').forEach(chip => chip.classList.remove('active'));
             if (element) {
                 element.classList.add('active');
@@ -433,7 +432,6 @@
                 }
             });
 
-            // Oculta os títulos das seções sem elementos
             const titles = document.querySelectorAll('.section-title');
             titles.forEach(title => {
                 const grid = title.nextElementSibling;
@@ -453,4 +451,3 @@
 
 </body>
 </html>
-
