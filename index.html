@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="iabox - O diretório definitivo para encontrar as melhores ferramentas gratuitas de Inteligência Artificial em um só lugar.">
     <title>iabox | O Universo das IAs</title>
+    <!-- Metatags para compartilhamento -->
+    <meta property="og:title" content="iabox | O Universo das IAs">
+    <meta property="og:description" content="O diretório definitivo para encontrar as melhores IAs gratuitas sem perder tempo.">
     <style>
         :root {
             --bg: #0f172a;
@@ -157,6 +160,26 @@
             color: #ffffff;
         }
 
+        /* Botão Sugerir IA Flutuante */
+        .suggest-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--accent);
+            color: #0f172a;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.2s ease;
+        }
+
+        .suggest-btn:hover {
+            transform: scale(1.05);
+        }
+
         footer {
             margin-top: 60px;
             color: var(--muted);
@@ -172,6 +195,9 @@
         <h1>🤖 iabox</h1>
         <p class="subtitle">O diretório definitivo das IAs mais produtivas da internet</p>
     </header>
+
+    <!-- Botão com o seu formulário conectado -->
+    <a href="https://forms.gle/8SCxp5NtBdUpPkqb8" target="_blank" class="suggest-btn">➕ Sugerir IA</a>
 
     <div class="quick-tags">
         <button class="chip active" onclick="filterCategory('all', this)">Todas</button>
