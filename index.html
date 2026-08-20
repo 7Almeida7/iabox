@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iabox - O diretório definitivo para encontrar as melhores ferramentas gratuitas de Inteligência Artificial em um só lugar.">
     <title>iabox | O Universo das IAs</title>
     <style>
         :root {
@@ -29,7 +30,7 @@
         header {
             text-align: center;
             margin-top: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         h1 {
@@ -46,19 +47,33 @@
             margin: 0;
         }
 
+        .container {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #38bdf8;
+            margin: 35px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 8px;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            width: 100%;
-            max-width: 1000px;
         }
 
         .card {
             background-color: var(--card-bg);
             border: 1px solid #334155;
             border-radius: 12px;
-            padding: 24px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -74,12 +89,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .card-header h3 {
             margin: 0;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
         }
 
         .tag {
@@ -93,9 +108,9 @@
 
         .card p {
             color: var(--muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.5;
-            margin: 0 0 20px 0;
+            margin: 0 0 15px 0;
         }
 
         .btn {
@@ -113,64 +128,144 @@
             background-color: var(--accent-hover);
             color: #ffffff;
         }
+
+        footer {
+            margin-top: 50px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>🤖 iabox</h1>
-        <p class="subtitle">As melhores ferramentas de Inteligência Artificial em um só lugar</p>
+        <p class="subtitle">As melhores IAs da internet organizadas por categoria</p>
     </header>
 
-    <div class="grid">
-        <!-- ChatGPT -->
-        <div class="card">
-            <div>
-                <div class="card-header">
-                    <h3>ChatGPT</h3>
-                    <span class="tag">Texto & Ideias</span>
+    <div class="container">
+
+        <!-- Categoria: Pesquisa -->
+        <div class="section-title">🔍 Buscas & Respostas Diretas</div>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Perplexity</h3>
+                        <span class="tag">Fontes & Citações</span>
+                    </div>
+                    <p>Substituto do Google com respostas diretas e links das fontes em tempo real.</p>
                 </div>
-                <p>Ideal para criar textos, tirar dúvidas, programar e gerar ideias rapidamente.</p>
+                <a href="https://www.perplexity.ai" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <a href="https://chat.openai.com" target="_blank" class="btn">Acessar IA</a>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Google Gemini</h3>
+                        <span class="tag">Busca Web</span>
+                    </div>
+                    <p>Conectado ao ecossistema Google para pesquisas atualizadas instantaneamente.</p>
+                </div>
+                <a href="https://gemini.google.com" target="_blank" class="btn">Acessar IA</a>
+            </div>
         </div>
 
-        <!-- Claude -->
-        <div class="card">
-            <div>
-                <div class="card-header">
-                    <h3>Claude</h3>
-                    <span class="tag">Escrita & Análise</span>
+        <!-- Categoria: Texto -->
+        <div class="section-title">✍️ Texto, Escrita & Código</div>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>ChatGPT</h3>
+                        <span class="tag">Geral</span>
+                    </div>
+                    <p>Crie artigos, e-mails, tire dúvidas do dia a dia e resolva problemas de código.</p>
                 </div>
-                <p>Excelente para ler documentos longos, fazer resumos e escrever textos naturais.</p>
+                <a href="https://chat.openai.com" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <a href="https://claude.ai" target="_blank" class="btn">Acessar IA</a>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Claude</h3>
+                        <span class="tag">Análise & Resumos</span>
+                    </div>
+                    <p>Perfeito para ler arquivos PDF pesados, fazer resumos e escrever textos naturais.</p>
+                </div>
+                <a href="https://claude.ai" target="_blank" class="btn">Acessar IA</a>
+            </div>
         </div>
 
-        <!-- Gemini -->
-        <div class="card">
-            <div>
-                <div class="card-header">
-                    <h3>Google Gemini</h3>
-                    <span class="tag">Pesquisa em Tempo Real</span>
+        <!-- Categoria: Imagens -->
+        <div class="section-title">🎨 Geração de Imagens</div>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Leonardo.Ai</h3>
+                        <span class="tag">Artes & Logos</span>
+                    </div>
+                    <p>Crie fotos ultra-realistas, logos, artes e ilustrações a partir de textos.</p>
                 </div>
-                <p>IA do Google integrada à web para buscas atualizadas e tarefas diversas.</p>
+                <a href="https://leonardo.ai" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <a href="https://gemini.google.com" target="_blank" class="btn">Acessar IA</a>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Canva Magic</h3>
+                        <span class="tag">Edição Rápida</span>
+                    </div>
+                    <p>Gere imagens com IA, remova fundos e crie designs prontos em segundos.</p>
+                </div>
+                <a href="https://www.canva.com" target="_blank" class="btn">Acessar IA</a>
+            </div>
         </div>
 
-        <!-- Perplexity -->
-        <div class="card">
-            <div>
-                <div class="card-header">
-                    <h3>Perplexity</h3>
-                    <span class="tag">Buscador IA</span>
+        <!-- Categoria: Slides -->
+        <div class="section-title">📊 Slides & Apresentações</div>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Gamma App</h3>
+                        <span class="tag">Apresentações</span>
+                    </div>
+                    <p>Digite o tema e a IA cria uma apresentação de slides completa e formatada.</p>
                 </div>
-                <p>Substituto do Google focado em respostas diretas com fontes e citações.</p>
+                <a href="https://gamma.app" target="_blank" class="btn">Acessar IA</a>
             </div>
-            <a href="https://www.perplexity.ai" target="_blank" class="btn">Acessar IA</a>
         </div>
+
+        <!-- Categoria: Áudio & Vídeo -->
+        <div class="section-title">🎵 Áudio, Voz & Vídeo</div>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>Suno AI</h3>
+                        <span class="tag">Músicas</span>
+                    </div>
+                    <p>Crie músicas completas com vocal e instrumental apenas descrevendo o estilo.</p>
+                </div>
+                <a href="https://suno.com" target="_blank" class="btn">Acessar IA</a>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <h3>ElevenLabs</h3>
+                        <span class="tag">Dublagem & Voz</span>
+                    </div>
+                    <p>Gere vozes humanas ultra-realistas em vários idiomas a partir de texto.</p>
+                </div>
+                <a href="https://elevenlabs.io" target="_blank" class="btn">Acessar IA</a>
+            </div>
+        </div>
+
     </div>
+
+    <footer>
+        <p>Feito por 7Almeida7 | iabox © 2026</p>
+    </footer>
 
 </body>
 </html>
