@@ -30,7 +30,7 @@
         header {
             text-align: center;
             margin-top: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         h1 {
@@ -50,6 +50,56 @@
         .container {
             width: 100%;
             max-width: 1000px;
+        }
+
+        /* Área de Busca e Filtros */
+        .search-area {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 35px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            background-color: var(--card-bg);
+            color: var(--text);
+            font-size: 1rem;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent);
+        }
+
+        .quick-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .chip {
+            background-color: var(--card-bg);
+            color: var(--muted);
+            border: 1px solid #334155;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .chip:hover {
+            border-color: var(--accent);
+            color: var(--text);
         }
 
         .section-title {
@@ -144,6 +194,18 @@
         <h1>🤖 iabox</h1>
         <p class="subtitle">O diretório definitivo das IAs mais produtivas da internet</p>
     </header>
+
+    <div class="search-area">
+        <input type="text" id="searchInput" class="search-input" placeholder="O que você procura?" oninput="filterCards()">
+        <div class="quick-tags">
+            <button class="chip" onclick="quickFilter('')">Todas</button>
+            <button class="chip" onclick="quickFilter('vídeo')">🎥 Criar Vídeos</button>
+            <button class="chip" onclick="quickFilter('estudo')">📚 Estudos</button>
+            <button class="chip" onclick="quickFilter('imagem')">🎨 Criar Imagens</button>
+            <button class="chip" onclick="quickFilter('áudio')">🎵 Áudio & Música</button>
+            <button class="chip" onclick="quickFilter('código')">💻 Programação</button>
+        </div>
+    </div>
 
     <div class="container">
 
@@ -375,8 +437,30 @@
     </div>
 
     <footer>
-        <p>Feito com ❤️ por 7Almeida7 | iabox © 2026</p>
+        <p>Feito por 7Almeida7 | iabox © 2026</p>
     </footer>
+
+    <script>
+        function filterCards() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function quickFilter(term) {
+            const input = document.getElementById('searchInput');
+            input.value = term;
+            filterCards();
+        }
+    </script>
 
 </body>
 </html>
